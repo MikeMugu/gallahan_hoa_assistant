@@ -1,0 +1,11 @@
+.env
+*.pyc
+__pycache__/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+faiss_index/
+requests/
+*.pdf
