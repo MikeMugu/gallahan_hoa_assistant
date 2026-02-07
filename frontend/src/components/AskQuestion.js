@@ -48,21 +48,6 @@ function AskQuestion() {
         <h2>Ask About HOA Bylaws</h2>
         <p className="subtitle">Get instant answers to your HOA questions</p>
 
-        <div className="example-questions">
-          <h3>Example Questions:</h3>
-          <div className="example-list">
-            {exampleQuestions.map((eq, index) => (
-              <button
-                key={index}
-                className="example-btn"
-                onClick={() => handleExampleClick(eq)}
-              >
-                {eq}
-              </button>
-            ))}
-          </div>
-        </div>
-
         <form onSubmit={handleSubmit} className="question-form">
           <textarea
             className="question-input"
@@ -79,6 +64,21 @@ function AskQuestion() {
             {loading ? 'Searching...' : 'Ask Question'}
           </button>
         </form>
+
+        <div className="example-questions">
+          <h3>Example Questions:</h3>
+          <div className="example-list">
+            {exampleQuestions.map((eq, index) => (
+              <button
+                key={index}
+                className="example-btn"
+                onClick={() => handleExampleClick(eq)}
+              >
+                {eq}
+              </button>
+            ))}
+          </div>
+        </div>
 
         {error && (
           <div className="error-message">
